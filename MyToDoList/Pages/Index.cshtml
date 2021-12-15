@@ -1,0 +1,40 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+    <div class="app">
+        <header class="app-header">
+            <div class="app-header-logo">
+        
+                <div class="logo">
+                    <h1 class="logo-title">
+                        <span>My Movies</span>
+                    </h1>
+                </div>
+            </div>
+        </header>
+
+     
+        <div class="app-body-main-content">
+
+            <section class="todo-section"/>
+                
+                    @foreach (Models.Movie movie in Model.Movies)
+                    {
+                        <div>
+                            <partial name="_MovieList" model="movie" />
+                        </div>
+
+
+                    }
+                
+
+        </div>
+
+    
+    </div>
+
+
